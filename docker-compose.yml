@@ -1,0 +1,9 @@
+version: '3'
+services:
+  jenkins-master:
+    restart: always
+    image: jenkins/jenkins:2.135
+    ports:
+      - "$JENKINS_PORT:8080"
+    volumes:
+      - ./jenkins-data:/var/jenkins_home
